@@ -18,14 +18,14 @@
             compatible = "zmk,behavior-mod-morph";
             label = "FLIPEQL";
             #binding-cells = <0>;
-            bindings = <&kp PLUS>, <&kp EQUAL>;
+            bindings = <&kp PLUS>, <&kp KP_EQUAL>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
         dotcomm: DOTCOMM {
             compatible = "zmk,behavior-mod-morph";
             label = "DOTCOMM";
             #binding-cells = <0>;
-            bindings = <&kp DOT>, <&kp COMMA>;
+            bindings = <&kp KP_DOT>, <&kp KP_COMMA>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
     };
@@ -48,7 +48,7 @@
 
 		raise {
 			bindings = <
-				&kp F7   &kp F8   &kp F9   &kp F10  &kp GRAVE &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &trans   &out OUT_TOG &trans      &kp MINUS &kp EQUAL &kp LPAR   &kp RPAR     &kp BSLH 
+				&kp F7   &kp F8   &kp F9   &kp F10  &kp GRAVE &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &trans   &out OUT_TOG &trans      &kp MINUS &flipeql  &kp LPAR   &kp RPAR     &kp BSLH 
 				&kp F4   &kp F5   &kp F6   &trans   &trans    &trans       &kp C_SLEEP  &trans       &trans       &trans       &trans   &trans       &kp K_SLEEP &trans    &trans    &trans     &trans       &trans   
 				&kp F1   &kp F2   &kp F3   &trans   &trans    &trans       &trans       &bt BT_CLR   &trans       &trans       &trans   &trans       &trans      &trans    &trans    &kp CLCK   &kp C_VOL_UP &trans   
 				&kp F11  &kp F12  &trans   &trans   &trans    &trans       &trans       &trans       &trans       &trans       &kp DEL  &trans       &trans      &trans    &trans    &kp C_NEXT &kp C_VOL_DN &kp C_PP 
