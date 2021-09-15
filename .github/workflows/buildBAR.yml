@@ -33,17 +33,17 @@ jobs:
         run: west update
       - name: West Zephyr export
         run: west zephyr-export
-      - name: West Build (BEST_BOARD_EVER)
-        run: west build -s zmk/app -b nice_nano -- -DSHIELD= BEST_BOARD_EVER -DZMK_CONFIG="${GITHUB_WORKSPACE}/config"
-      - name: BEST_BOARD_EVER DTS File
+      - name: West Build (NUM_B4R_18)
+        run: west build -s zmk/app -b nice_nano -- -DSHIELD=num_b4r_18 -DZMK_CONFIG="${GITHUB_WORKSPACE}/config"
+      - name: NUM_B4R_18 DTS File
         if: ${{ always() }}
         run: cat -n build/zephyr/nice_nano.dts.pre.tmp
-      - name: BEST_BOARD_EVER Kconfig file
+      - name: NUM_B4R_18 Kconfig file
         run: cat build/zephyr/.config | grep -v "^#" | grep -v "^$"
       - name: Rename zmk.uf2
-        run: cp build/zephyr/zmk.uf2 BEST_BOARD_EVER_nice_nano.uf2
-      - name: Archive (BEST_BOARD_EVER)
+        run: cp build/zephyr/zmk.uf2 num_b4r_18_nice_nano.uf2
+      - name: Archive (NUM_B4R_18)
         uses: actions/upload-artifact@v2
         with:
           name: firmware
-          path: BEST_BOARD_EVER_nice_nano.uf2
+          path: num_b4r_18_nice_nano.uf2
