@@ -1,0 +1,11 @@
+# Copyright (c) 2020 The ZMK Contributors
+# SPDX-License-Identifier: MIT
+
+if SHIELD_BEST_BOARD_EVER
+config ZMK_KEYBOARD_NAME
+	default "BEST_BOARD_EVER"
+config ZMK_SLEEP
+  default y
+config ZMK_IDLE_SLEEP_TIMEOUT
+  default 600000
+endif
